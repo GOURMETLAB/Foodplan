@@ -384,14 +384,15 @@ section#faq .faq-answer.active {
 }
 
 /* === BOTÓN FLOTANTE DE WHATSAPP === */
+/* === BOTÓN FLOTANTE DE WHATSAPP === */
 .whatsapp-btn {
     position: fixed;
-    bottom: 25px;
+    bottom: 20px;
     right: 20px;
     background-color: #25D366;
     color: #fff;
     font-size: 24px;
-    padding: 10px 10px;
+    padding: 12px 12px;
     border-radius: 50px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -400,9 +401,11 @@ section#faq .faq-answer.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 8px;
     text-decoration: none;
+    z-index: 9999; /* Prioridad máxima */
 }
+
 
 .whatsapp-btn:hover {
     background-color: #1EBE5D;
