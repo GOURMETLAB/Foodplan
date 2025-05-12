@@ -1,0 +1,714 @@
+/* ---------------------------------- RESET GENERAL ---------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #231F20;
+  color: #231F20;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* === VIDEO DE FONDO === */
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+/* === TEXTO SOBRE EL VIDEO === */
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.video-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.video-text p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+/* === CAPA OSCURA (OVERLAY) === */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* === TEXTO SOBRE EL VIDEO === */
+.video-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f5f5f5;
+  z-index: 2;
+   height: 80px;
+    width: 300px;
+}
+
+.video-text h1 {
+  font-size: 27px;
+  letter-spacing: 1px;
+}
+
+.video-text h1 .bold {
+  font-weight: 900;
+}
+
+.video-text p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.video-text .cta-button {
+  display: inline-block;
+  background-color: #E4E2DD;
+  color: #231F20;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+  outline: none;
+}
+
+.video-text .cta-button:hover {
+  background-color: #231F20;
+  color: #E4E2DD;
+}
+
+
+/* ---------------------------------- MENÚ FLOTANTE ---------------------------------- */
+.menu-flotante {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.menu-contenedor {
+  background-color: #231F20;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 25px;
+  gap: 30px;
+  max-width: 1100px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
+}
+
+/* === LOGO === */
+.logo img {
+  height: 45px;
+}
+
+/* === MENÚ HAMBURGUESA === */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: #E4E2DD;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* === MENÚ DESPLEGABLE === */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #E4E2DD;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-links li a:hover {
+  color: #f5f5f5;
+  transition-duration: color 0.2s;
+}
+
+/* === RESPONSIVE (MOBILE) === */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #231F20;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .nav-links.activo {
+    display: flex;
+  }
+
+  .menu-toggle.abierto span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.abierto span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.abierto span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+  .video-text {
+    top: 35%;
+}
+}
+/* === SECCIÓN QUIÉNES SOMOS === */
+section#quienes-somos {
+    background-color: #1e1e1e;
+    padding: 40px 20px;
+    max-width: 1100px;
+    text-align: center;
+    color: #E4E2DD;
+    background-color: #231F20;
+  margin: -40px auto 40px; /* Solapa de 30px hacia arriba */
+  border-radius: 24px;
+  box-shadow: none; /* Sin sombra */
+  position: relative;
+  z-index: 3;
+}
+
+section#quienes-somos h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #f5f5f5;
+}
+
+section#quienes-somos p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+section#quienes-somos .image-container {
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+section#quienes-somos .about-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+/* === SECCIÓN BENEFICIOS === */
+section#beneficios {
+    background-color: #231F20;
+    padding: 0px 20px;
+    max-width: 1100px;
+    margin: 10px auto;
+    border-radius: 12px;
+    text-align: left;
+    color: #E4E2DD;
+}
+
+section#beneficios h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+section#beneficios .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section#beneficios .benefits-list li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section{
+  background-color: #231F20;
+  padding: 40px 20px;
+  max-width: 1100px;
+  box-shadow: none; /* Sin sombra */
+}
+
+/* === SECCIÓN CONTACTO === */
+section#contacto {
+    background-color: #231F20;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 40px auto;
+    border-radius: 12px;
+    text-align: center;
+    color: #E4E2DD;
+}
+section#contacto h2{
+  font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #f5f5f5;
+}
+
+section#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+section#contacto form input,
+section#contacto form textarea {
+    padding: 12px;
+    border: 1px solid #3d3d3d;
+    background-color: #3d3d3d;
+    color: #E4E2DD;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+section#contacto form button {
+    background-color: #f5f5f5;
+    color: #231F20;
+    border: 1px solid #f5f5f5;
+    font-weight: bold;
+    padding: 12px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+section#contacto form button:hover {
+    background-color: #E4E2DD;
+    color: #2d3b2e;
+}
+/* === SECCIÓN FAQ === */
+section#faq {
+    background-color: #231F20;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 40px auto;
+    border-radius: 12px;
+    text-align: left;
+    color: #E4E2DD;
+}
+
+section#fag h2{
+  font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #f5f5f5;
+}
+section#faq h3 {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 20px 0px;
+    color: #e9ddbe;
+    transition: color 0.3s;
+    font-weight: 300;
+}
+section#faq h3:hover {
+    color: #E4E2DD;
+}
+
+section#faq .faq-answer {
+    display: none;
+    padding-left: 15px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: max-height 0.3s;
+}
+
+section#faq .faq-answer.active {
+    display: block;
+}
+
+/* === BOTÓN FLOTANTE DE WHATSAPP === */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    background-color: #25D366;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 10px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1EBE5D;
+}
+
+.whatsapp-btn img {
+    width: 30px;
+    height: 30px;
+}
+/* === FOOTER === */
+footer {
+    background-color: #231F20;
+    color: #E4E2DD;
+    padding: 40px 20px;
+    text-align: center;
+}
+ 
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-info, 
+.footer-links, 
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-info h3,
+.footer-links h3,
+.footer-social h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #E4E2DD;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f5f5f5;
+}
+
+.footer-social a {
+    margin-right: 10px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.footer-social a:hover {
+    transform: scale(1.1);
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #E4E2DD;
+    border-top: 1px solid #3d3d3d;
+    padding-top: 10px;
+}
+.logo-footer img{
+  width: 200px;
+  height: auto;
+ }
+/* === CAPA DE BLOQUEO PARA ESCRITORIO === */
+.desktop-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.97);
+    color: #f5f5f5;
+    text-align: center;
+    padding: 50px 20px;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.desktop-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.desktop-overlay p {
+    font-size: 1.2rem;
+    max-width: 500px;
+}
+
+/* === ACTIVAR LA CAPA EN DESKTOP (más de 500px) === */
+@media (min-width: 500px) {
+    .desktop-overlay {
+        display: flex;
+    }
+
+    body {
+        overflow: hidden; /* Evita que se pueda hacer scroll debajo del mensaje */
+    }
+}
+
+
+
+/* === SECCIÓN CATÁLOGO PRINCIPAL === */
+section#catalogo {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    color: #231F20;
+}
+
+section#catalogo h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+}
+
+/* === GRID DE CATEGORÍAS === */
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.category-card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    color: #fff;
+}
+
+.category-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.category-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.category-card .btn-category {
+    background-color: #E4E2DD;
+    color: #231F20;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 10px 0;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.category-card .btn-category:hover {
+    background-color: #d9d9d9;
+    color: #231F20;
+}
+
+/* === SECCIÓN PRODUCTOS CATEGORÍA === */
+section#productos-categoria {
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+    color: #231F20;
+}
+
+section#productos-categoria h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+section#productos-categoria .intro-text {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #E4E2DD;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-item {
+    display: flex;
+    background: #f5f5f5;
+    border-radius: 12px;
+    overflow: hidden;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+}
+
+.product-image {
+    width: 30%;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.product-info {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.product-info h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #231F20;
+    margin: 0;
+}
+
+.product-info p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #444;
+}
+
+.product-info .minimum {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.btn-product {
+    background-color: #231F20;
+    color: #f5f5f5;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-product:hover {
+    background-color: #627555;
+    color: #f5f5f5;
+}
+
+/* === MOBILE OPTIMIZADO === */
+@media (max-width: 768px) {
+    .product-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-image {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .product-info {
+        width: 100%;
+    }
+}
+
+.portada img{
+  width: 350px;
+}

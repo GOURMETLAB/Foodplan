@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Plan Patagonia - Mayorista de Productos Gourmet</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="portada">
+    <img src="../img/Slide 16_9 - 1.png" alt="portada">
+</div>
+<!-- HEADER CON MENÚ FLOTANTE -->
+<header class="menu-flotante">
+    <nav class="menu-contenedor">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Food Plan" />
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="../productos.html">Productos</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+     <section id="productos-categoria">
+    <h2>Pastas de Autor</h2>
+    <p class="intro-text">Elaboradas con ingredientes de máxima calidad, 100% artesanales. Sin aditivos, colorantes ni conservantes.</p>
+    
+    <div class="product-list">
+        <div class="product-item">
+            <div class="product-image">
+                <img src="../img/raviolones.png" alt="Raviolones de Jamón y Queso">
+            </div>
+            <div class="product-info">
+                <h3>Raviolones de Jamón y Queso</h3>
+                <p>Elaborados con jamón cocido y muzzarella. Masa con huevos frescos.</p>
+                <p class="minimum">Compra mínima: 180 unidades</p>
+                <a href="#contacto" class="btn-product">Consultar</a>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <div class="product-image">
+                <img src="../img/sorrentinos.png" alt="Sorrentinos de Calabaza">
+            </div>
+            <div class="product-info">
+                <h3>Sorrentinos de Calabaza</h3>
+                <p>Rellenos de cabuto asado y muzzarella, masa de espinaca.</p>
+                <p class="minimum">Compra mínima: 180 unidades</p>
+                <a href="#contacto" class="btn-product">Consultar</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+<footer>
+    <div class="footer-container">
+    <div class="logo-footer">
+            <img src="../img/logo.png" alt="Food Plan" />
+        </div>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div class="footer-links">
+            <h3>Menú</h3>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="footer-social">
+            <h3>Conéctate con Nosotros</h3>
+            <a href="https://www.instagram.com/tu-instagram" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/TU-NUMERO-DE-TELEFONO" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Food Plan Patagonia. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('activo');
+        toggle.classList.toggle('abierto');
+    });
+</script>

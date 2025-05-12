@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Plan Patagonia - Mayorista de Productos Gourmet</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<!-- VIDEO DE FONDO -->
+<div class="video-background">
+    <video autoplay muted loop class="video" id="background-video">
+        <source src="./video/food-plan-video.mp4" type="video/mp4">
+    </video>
+</div>
+    <div class="video-text">
+        <h1>SOLUCIONES QUE<br>CREAN EXPERIENCIAS</h1>
+        <a href="./page/productos.html" class="cta-button">Descubrí nuestros productos</a>
+    </div>
+</div>
+
+<!-- HEADER CON MENÚ FLOTANTE -->
+<header class="menu-flotante">
+    <nav class="menu-contenedor">
+        <div class="logo">
+            <img src="./img/logo.png" alt="Food Plan" />
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="./page/productos.html">Productos</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- SECCIÓN quienes somos -->
+<section id="quienes-somos">
+    <h2>¿Quiénes Somos?</h2>
+    <p>En Food Plan Patagonia, nos especializamos en ofrecer productos gourmet de alta calidad para restaurantes y locales gastronómicos. Nuestra experiencia nos permite brindar soluciones a medida, garantizando sabor y excelencia en cada producto.</p>
+    
+    <div class="image-container">
+        <img src="./img/quienes-somos.png" alt="Nuestro equipo" class="about-image">
+    </div>
+</section>
+<!-- SECCIÓN BENEFICIOS -->
+<section id="beneficios">
+    <h2>Beneficios de Elegirnos</h2>
+    <ul class="benefits-list">
+        <li><span>✔️</span> Productos premium de alta calidad.</li>
+        <li><span>✔️</span> Atención personalizada para tu negocio.</li>
+        <li><span>✔️</span> Entregas directas a tu puerta.</li>
+        <li><span>✔️</span> Asesoría constante para tus pedidos.</li>
+        <li><span>✔️</span> Catálogo variado y actualizado.</li>
+    </ul>
+</section>
+<!-- SECCIÓN CONTACTO -->
+<section id="contacto">
+    <h2>Contáctanos</h2>
+    <form
+        action="https://formspree.io/f/myzwnezy"
+        method="POST">
+        <input type="text" name="nombre" placeholder="Nombre Completo" required>
+        <input type="email" name="correo" placeholder="Correo Electrónico" required>
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
+        <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5"></textarea>
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+</section>
+
+<section id="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item">
+        <h3 onclick="toggleFAQ(this)">¿Cuáles son los horarios de atención?</h3>
+        <p class="faq-answer">Atendemos de Lunes a Viernes, de 9:00 a 18:00 hs.</p>
+    </div>
+    <div class="faq-item">
+        <h3 onclick="toggleFAQ(this)">¿Cuál es el pedido mínimo?</h3>
+        <p class="faq-answer">El pedido mínimo es de 180 unidades por variedad.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <!-- Información de Contacto -->
+        <div class="footer-info">
+            <h3>Food Plan Patagonia</h3>
+            <p>📍 Dirección: Avenida Gourmet 123, Neuquén</p>
+            <p>📞 Teléfono: +54 9 299 123 4567</p>
+            <p>✉️ Correo: contacto@foodplanpatagonia.com</p>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div class="footer-links">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="footer-social">
+            <h3>Conéctate con Nosotros</h3>
+            <a href="https://www.instagram.com/tu-instagram" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/TU-NUMERO-DE-TELEFONO" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Food Plan Patagonia. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- CAPA DE BLOQUEO PARA ESCRITORIO -->
+<div class="desktop-overlay">
+    <h2>Sitio en Construcción</h2>
+    <p>Estamos trabajando en la versión de escritorio. Por favor, visítanos desde tu móvil.</p>
+</div>
+
+<!-- Botón Flotante de WhatsApp -->
+<a href="https://wa.me/TU-NUMERO-DE-TELEFONO" class="whatsapp-btn" target="_blank" aria-label="Chatea con nosotros en WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<!-- preguntas -->
+<script>
+    function toggleFAQ(element) {
+        element.nextElementSibling.classList.toggle('active');
+    }
+</script>
+<!-- menu -->
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('activo');
+        toggle.classList.toggle('abierto');
+    });
+</script>
+</body>
+</html>
+
